@@ -22,7 +22,7 @@
             <manifest>
               <addClasspath>true</addClasspath>
               <classpathPrefix>lib/</classpathPrefix>
-              <mainClass>PageRankDriver</mainClass>
+              <mainClass>PageRank</mainClass>
             </manifest>
           </archive>
         </configuration>

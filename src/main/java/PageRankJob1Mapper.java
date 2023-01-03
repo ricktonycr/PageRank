@@ -31,6 +31,7 @@ import org.apache.hadoop.mapreduce.Mapper;
 import java.util.regex.MatchResult;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import org.apache.hadoop.fs.Path;
 
 import org.apache.hadoop.mapreduce.lib.input.FileSplit;
 
@@ -54,16 +55,18 @@ public class PageRankJob1Mapper extends Mapper<LongWritable, Text, Text, Text> {
         String fileName = ((FileSplit) context.getInputSplit()).getPath().getName();
         Text name = new Text(fileName);
 
-        Pattern p = Pattern.compile("href=\"([^\"]*)\"", Pattern.DOTALL);
+        Pattern p = Pattern.compile("href=\"([^\"]*\\.html)\"", Pattern.DOTALL);
         Matcher m = p.matcher(value.toString());
+        System.out.println("T:" + value.toString());
 
         while (m.find()) 
         {
             System.out.println(m.group(1));
             String nodeA = fileName;
-            String nodeB = m.group(1);
+            String nodeB = (new Path(m.group(1))).getName();
             // add the current source node to the node list so we can 
             // compute the total amount of nodes of our graph in Job#2
+            context.write(new Text(nodeA), new Text(nodeB));
             PageRank.NODES.add(nodeA);
             // also add the target node to the same list: we may have a target node 
             // with no outlinks (so it will never be parsed as source)

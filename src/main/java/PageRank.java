@@ -123,9 +123,9 @@ public class PageRank {
         }
         
         // delete output path if it exists already
-        FileSystem fs = FileSystem.get(new Configuration());
-        if (fs.exists(new Path(PageRank.OUT_PATH)))
-            fs.delete(new Path(PageRank.OUT_PATH), true);
+        //FileSystem fs = FileSystem.get(new Configuration());
+        //if (fs.exists(new Path(PageRank.OUT_PATH)))
+        //    fs.delete(new Path(PageRank.OUT_PATH), true);
         
         // print current configuration in the console
         System.out.println("Damping factor: " + PageRank.DAMPING);
