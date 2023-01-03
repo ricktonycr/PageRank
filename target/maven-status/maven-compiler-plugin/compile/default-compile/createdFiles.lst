@@ -1,0 +1,6 @@
+PageRank.class
+PageRankJob3Mapper.class
+PageRankJob1Reducer.class
+PageRankJob2Mapper.class
+PageRankJob2Reducer.class
+PageRankJob1Mapper.class

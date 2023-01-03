@@ -1,0 +1,6 @@
+/home/rcruz/maestria/cloud/hadoop-pagerank/src/main/java/job1/PageRankJob1Mapper.java
+/home/rcruz/maestria/cloud/hadoop-pagerank/src/main/java/job2/PageRankJob2Mapper.java
+/home/rcruz/maestria/cloud/hadoop-pagerank/src/main/java/PageRank.java
+/home/rcruz/maestria/cloud/hadoop-pagerank/src/main/java/job3/PageRankJob3Mapper.java
+/home/rcruz/maestria/cloud/hadoop-pagerank/src/main/java/job2/PageRankJob2Reducer.java
+/home/rcruz/maestria/cloud/hadoop-pagerank/src/main/java/job1/PageRankJob1Reducer.java
