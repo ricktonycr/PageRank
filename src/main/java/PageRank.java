@@ -181,6 +181,7 @@ public class PageRank {
         job.setJarByClass(PageRank.class);
         
         // input / mapper
+        FileInputFormat.setInputDirRecursive(job, true);
         FileInputFormat.addInputPath(job, new Path(in));
         job.setInputFormatClass(TextInputFormat.class);
         job.setMapOutputKeyClass(Text.class);
@@ -214,6 +215,7 @@ public class PageRank {
         job.setJarByClass(PageRank.class);
         
         // input / mapper
+        FileInputFormat.setInputDirRecursive(job, true);
         FileInputFormat.setInputPaths(job, new Path(in));
         job.setInputFormatClass(TextInputFormat.class);
         job.setMapOutputKeyClass(Text.class);
@@ -246,6 +248,7 @@ public class PageRank {
         job.setJarByClass(PageRank.class);
         
         // input / mapper
+        FileInputFormat.setInputDirRecursive(job, true);
         FileInputFormat.setInputPaths(job, new Path(in));
         job.setInputFormatClass(TextInputFormat.class);
         job.setMapOutputKeyClass(DoubleWritable.class);
